@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines</title>
+    <link rel="stylesheet" href="../styles/styles1.css">
+</head>
+
+<body>
+    <div class = "container">
+        <img src = "../images/gif.gif" alt="gif" class = "gif">
+        <h1>To confirm that you're really my gf, fill out this form</h1>
+
+        <div class = "form-container">
+            <form action="Page2.html" method="get" onsubmit="return validation()">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required><br><br>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required><br><br>
+
+                <label for ="birthday" >Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required><br><br>
+
+                <label for = "favoritecolor">What is Alec's favorite color (Only one color):</label>
+                <input type="text" id="favoritecolor" name="favoritecolor" required><br><br>
+
+
+                <div class = "btn-wrapper">
+                    <input class="submit-btn" type="submit" value="Submit">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const fname = document.getElementById("fname");
+        const lname = document.getElementById("lname"); 
+        const birthday = document.getElementById("birthday");
+        const favoritecolor = document.getElementById("favoritecolor");
+
+        function validation() {
+        
+        if (
+            fname.value.toLowerCase() === "bianca"&&
+            lname.value.toLowerCase() === "rosales" &&
+            birthday.value === "2004-07-16" &&
+            favoritecolor.value.toLowerCase() === "red")
+        {
+            alert("Credentials correct! Redirecting to the next page...");
+            return true;
+        } else {
+            alert("Sorry, but you are not my girlfriend BITCH!!!");
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>

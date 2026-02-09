@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines</title>
+    <link rel="stylesheet" href="../styles/styles2.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="../images/Untitled.jpg" alt="Me image" class="pic">
+        <h1>Hi, will you be my Valentine?</h1>
+
+        <div class="button-container">
+            <button id="btn1" onclick="alert('YIPIEEEEE'); window.location.href='/html/page3.html'"> SUPER
+                YES!!!</button>
+            <button id="btn2" onmouseover="noFunction()"> NO🥲</button>
+        </div>
+    </div>
+
+
+    <script>
+        function noFunction() {
+            const btn2 = document.getElementById("btn2");
+
+
+            const maxX = window.innerWidth - btn2.offsetWidth;
+            const maxY = window.innerHeight - btn2.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            btn2.style.position = "absolute";
+            btn2.style.left = randomX + "px";
+            btn2.style.top = randomY + "px";
+
+
+
+        }
+    </script>
+</body>
+
+</html>
